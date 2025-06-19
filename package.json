@@ -1,0 +1,31 @@
+{
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "@shopify/prettier-plugin-liquid": "^1.6.2",
+    "better-sqlite3": "^11.7.0",
+    "glob": "^11.0.0",
+    "html-validate": "^9.0.0-rc.4",
+    "markdownlint-cli2": "^0.15.0",
+    "prettier": "^3.4.2",
+    "shell-quote": "^1.8.2"
+  },
+  "scripts": {
+    "test": "node test/fixtures-html-validate-should-fail.mjs && node test/build-html-validate.mjs",
+    "generate-sitemap": "node scripts/generate-sitemap.mjs",
+    "prettier-check": "yarn prettier --check .",
+    "markdownlint-check": "yarn markdownlint-cli2 '**/*.md'",
+    "prettier-fix": "yarn prettier --write .",
+    "markdownlint-fix": "yarn markdownlint-cli2 --fix '**/*.md'",
+    "postinstall": "yarn dlx @yarnpkg/sdks vscode"
+  },
+  "packageManager": "yarn@4.5.3",
+  "dependencies": {
+    "front-matter": "^4.0.2",
+    "xml2js": "^0.6.2"
+  },
+  "dependenciesMeta": {
+    "@shopify/prettier-plugin-liquid@1.5.0": {
+      "unplugged": true
+    }
+  }
+}
